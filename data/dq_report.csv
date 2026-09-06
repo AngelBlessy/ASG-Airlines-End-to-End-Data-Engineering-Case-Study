@@ -1,0 +1,10 @@
+dataset,check,rows
+bookings,bad_format:status,30
+flights,duplicate_key,16
+flights,missing:airline,41
+flights,placeholder:airline,31
+flights,quarantine:duplicate_row,15
+passengers,duplicate_key,39
+passengers,missing:last_name,10
+payments,missing:amount,48
+payments,not_numeric:amount,30

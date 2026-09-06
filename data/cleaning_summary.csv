@@ -1,0 +1,9 @@
+dataset,change,count
+flights,rows in bronze,1005
+flights,rows in silver,1004
+flights,airline filled from code,69
+flights,overnight flights,122
+passengers,rows in bronze,1039
+passengers,rows in silver,1000
+bookings,status set to UNKNOWN,75
+payments,amount imputed to median,78

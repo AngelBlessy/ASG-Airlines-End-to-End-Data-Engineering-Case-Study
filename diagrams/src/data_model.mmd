@@ -1,0 +1,54 @@
+erDiagram
+  dim_airline   ||--o{ fact_flights  : airline_code
+  dim_route     ||--o{ fact_flights  : route_id
+  dim_date      ||--o{ fact_flights  : date_key
+  dim_date      ||--o{ fact_bookings : date_key
+  fact_flights  ||--o{ fact_bookings : flight_id
+  dim_passenger ||--o{ fact_bookings : passenger_id
+  fact_bookings ||--o{ fact_payments : booking_id
+
+  fact_flights {
+    string flight_id PK
+    string airline_code FK
+    int route_id FK
+    int date_key FK
+    int duration_minutes
+    int delay_minutes
+    bool is_delayed
+    bool is_overnight
+    bool is_anomaly
+  }
+  fact_bookings {
+    string booking_id PK
+    string passenger_id FK
+    string flight_id FK
+    int date_key FK
+    string status
+  }
+  fact_payments {
+    string payment_id PK
+    string booking_id FK
+    decimal amount
+    string payment_method
+  }
+  dim_airline {
+    string airline_code PK
+    string airline
+  }
+  dim_route {
+    int route_id PK
+    string source
+    string destination
+  }
+  dim_date {
+    int date_key PK
+    date date
+    int year
+    string weekday
+  }
+  dim_passenger {
+    string passenger_id PK
+    int age
+    string age_band
+    string gender
+  }

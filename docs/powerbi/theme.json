@@ -1,0 +1,21 @@
+{
+  "name": "ASG Airlines",
+  "dataColors": ["#1f4e79", "#2e8b8b", "#e1a53d", "#a4405f", "#5c8a3a", "#7a6fb0", "#c25b3a", "#4c4c4c"],
+  "background": "#ffffff",
+  "foreground": "#2b2b2b",
+  "tableAccent": "#1f4e79",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [{ "fontColor": { "solid": { "color": "#1f4e79" } }, "fontSize": 12 }],
+        "background": [{ "show": true, "color": { "solid": { "color": "#ffffff" } } }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#e6e6e6" } }, "radius": 6 }]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [{ "fontSize": 24, "color": { "solid": { "color": "#1f4e79" } } }]
+      }
+    }
+  }
+}

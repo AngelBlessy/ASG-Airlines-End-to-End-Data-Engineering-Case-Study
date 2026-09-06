@@ -1,0 +1,5 @@
+airline,flights,delayed,overnight,anomalies,delayed_pct,anomaly_pct
+Air India,255,93,33,62,36.5,24.3
+IndiGo,272,113,32,76,41.5,27.9
+SpiceJet,247,87,29,67,35.2,27.1
+Vistara,230,81,28,64,35.2,27.8

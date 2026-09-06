@@ -1,0 +1,20 @@
+flowchart LR
+  SRC["Landing<br/>Excel workbook - 4 sheets"]
+  BRZ["Bronze<br/>raw rows as text<br/>+ data quality flags"]
+  QAR["Quarantine<br/>key missing or<br/>exact duplicate"]
+  SLV["Silver<br/>cleaned and standardised<br/>PII hashed"]
+  GLD["Gold<br/>star schema<br/>+ KPI tables (CSV)"]
+  RPT["Power BI<br/>report"]
+
+  SRC --> BRZ
+  BRZ -. rejected .-> QAR
+  BRZ --> SLV
+  SLV --> GLD
+  GLD --> RPT
+
+  style SRC fill:#f4f6f8,stroke:#54636f
+  style BRZ fill:#eef3f8,stroke:#1f4e79
+  style QAR fill:#fbeee2,stroke:#c98a3a
+  style SLV fill:#e7f1f1,stroke:#2e8b8b
+  style GLD fill:#fbf1dd,stroke:#c9a13a
+  style RPT fill:#f4f6f8,stroke:#54636f

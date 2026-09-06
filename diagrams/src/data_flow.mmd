@@ -1,0 +1,21 @@
+flowchart TD
+  A["Excel workbook<br/>flights, passengers, bookings, payments"]
+  B["Read every cell as text,<br/>reconcile each sheet to its column contract"]
+  D{"Row-level<br/>data quality checks"}
+  Q["Quarantine parquet<br/>key missing or exact duplicate"]
+  E["Bronze parquet<br/>all rows kept + DQ flags"]
+  F["Transform to Silver<br/>standardise, repair airline, parse time and overnight,<br/>recompute duration, dedupe, impute, hash PII"]
+  H["Model to Gold<br/>dimensions and facts, delay and anomaly fields,<br/>KPI tables - all CSV"]
+
+  A --> B --> D
+  D -- fails a hard rule --> Q
+  D -- passes --> E
+  E --> F --> H
+
+  style A fill:#f4f6f8,stroke:#54636f
+  style B fill:#eef3f8,stroke:#1f4e79
+  style D fill:#eef3f8,stroke:#1f4e79
+  style Q fill:#fbeee2,stroke:#c98a3a
+  style E fill:#eef3f8,stroke:#1f4e79
+  style F fill:#e7f1f1,stroke:#2e8b8b
+  style H fill:#fbf1dd,stroke:#c9a13a

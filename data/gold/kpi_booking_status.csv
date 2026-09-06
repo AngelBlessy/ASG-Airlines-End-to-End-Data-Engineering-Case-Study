@@ -1,0 +1,5 @@
+status,bookings,share_pct
+CANCELLED,314,31.4
+CONFIRMED,320,32.0
+PENDING,291,29.1
+UNKNOWN,75,7.5

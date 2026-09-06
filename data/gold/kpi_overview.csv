@@ -1,0 +1,2 @@
+total_flights,airlines,routes,avg_duration_min,overnight_flights,delayed_flights,anomaly_flights,total_bookings,cancellation_rate_pct,total_revenue,avg_fare
+1004,4,30,164.8,122,374,269,1000,31.4,8011258.0,8011.0
